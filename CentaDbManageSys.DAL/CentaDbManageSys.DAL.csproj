@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37AAA959-51B6-4579-BB71-CE90BEDB5D23}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CentaDbManageSys.DAL</RootNamespace>
+    <AssemblyName>CentaDbManageSys.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="BuildDbService.cs" />
+    <Compile Include="BuildCtDbService.cs" />
+    <Compile Include="BuildCmDbService.cs" />
+    <Compile Include="BuildFwDbService.cs" />
+    <Compile Include="UnitCtDbService.cs" />
+    <Compile Include="UnitCmDbService.cs" />
+    <Compile Include="UnitFwDbService.cs" />
+    <Compile Include="EstateCtDbService.cs" />
+    <Compile Include="EstateCmDbService.cs" />
+    <Compile Include="EstateFwDbService.cs" />
+    <Compile Include="EstateDbService.cs" />
+    <Compile Include="ScopeDbService.cs" />
+    <Compile Include="UnitDbService.cs" />
+    <Compile Include="MemberDbService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CenataDbManageSys.Model\CentaDbManageSys.Model.csproj">
+      <Project>{67CDA512-0643-4E1B-91D3-76EA9D59AFF2}</Project>
+      <Name>CentaDbManageSys.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CentaLine.Common\CentaLine.Common.csproj">
+      <Project>{23514E6B-0972-46F1-8FF1-D9FF4A27507E}</Project>
+      <Name>CentaLine.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CentaLine.DataCommon\CentaLine.DataCommon.csproj">
+      <Project>{F4FCC4B9-FA4D-4D10-A85E-3E7D9C6F4290}</Project>
+      <Name>CentaLine.DataCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MemberDb\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

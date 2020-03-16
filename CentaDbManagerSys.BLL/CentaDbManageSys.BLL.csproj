@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{04C8E185-5229-4666-AD6F-3BC377B69402}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CentaDbManageSys.BLL</RootNamespace>
+    <AssemblyName>CentaDbManagerSys.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComparedBuild.cs" />
+    <Compile Include="ComparedEstate.cs" />
+    <Compile Include="Service\BuildCtService.cs" />
+    <Compile Include="Service\UnitCmService.cs" />
+    <Compile Include="Service\BuildFwService.cs" />
+    <Compile Include="Service\UnitFwService.cs" />
+    <Compile Include="Service\ScopeService.cs" />
+    <Compile Include="Service\BuildCmService.cs" />
+    <Compile Include="BuildCm.cs" />
+    <Compile Include="EstateCm.cs" />
+    <Compile Include="Service\EstateFwService.cs" />
+    <Compile Include="UnitCm.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="Service\EstateCmService.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="Scope.cs" />
+    <Compile Include="Service\UnitCtService.cs" />
+    <Compile Include="Service\MemberService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BuildFw.cs" />
+    <Compile Include="EstateFw.cs" />
+    <Compile Include="UnitFw.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CenataDbManageSys.Model\CentaDbManageSys.Model.csproj">
+      <Project>{67CDA512-0643-4E1B-91D3-76EA9D59AFF2}</Project>
+      <Name>CentaDbManageSys.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CentaDbManageSys.DAL\CentaDbManageSys.DAL.csproj">
+      <Project>{37AAA959-51B6-4579-BB71-CE90BEDB5D23}</Project>
+      <Name>CentaDbManageSys.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CentaLine.Common\CentaLine.Common.csproj">
+      <Project>{23514E6B-0972-46F1-8FF1-D9FF4A27507E}</Project>
+      <Name>CentaLine.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildCt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UnitCt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EstateCt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Service\EstateCtService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
